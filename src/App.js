@@ -45,8 +45,6 @@ class App extends Component {
         });
       }
     }
-    let data = this.state.todos.splice(i,1);
-    console.log(data);
   }
 
   render() {
@@ -65,7 +63,7 @@ class App extends Component {
             <ul>
               {this.state.todos.map((item, i) =>
                 <li key={i}>{item.title}
-                  <button  onClick={this.toDoRemove(item.title)}>remove</button>
+                  <button  onClick={ () => this.toDoRemove(item)}>remove</button>
                 </li>
               )}
             </ul>
